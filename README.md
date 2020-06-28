@@ -270,7 +270,7 @@ Released under the [MIT License] by [Michael van Rooijen].
 
 [Michael van Rooijen]: https://michael.vanrooijen.io
 [HireFire]: https://www.hirefire.io
-[RubyDoc]: https://rubydoc.info/gems/graphql_activerecord_autoselect
+[RubyDoc]: https://rubydoc.info/github/mrrooijen/graphql_activerecord_autoselect/master
 [MIT License]: https://github.com/mrrooijen/graphql_activerecord_autoselect/blob/master/LICENSE.txt
 [GraphQL (Ruby)]: https://github.com/rmosolgo/graphql-ruby
 [ActiveRecord]: https://github.com/rails/rails/tree/master/activerecord

@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.metadata["source_code_uri"]   = spec.homepage
   spec.metadata["changelog_uri"]     = spec.homepage + "/blob/master/CHANGELOG.md"
   spec.metadata["bug_tracker_uri"]   = spec.homepage + "/issues"
-  spec.metadata["documentation_uri"] = "https://rubydoc.info/gems/" + spec.name
+  spec.metadata["documentation_uri"] = "https://rubydoc.info/gems/#{spec.name}/#{spec.version}"
 
   spec.files         = `git ls-files -- lib README.md CHANGELOG.md LICENSE.txt`.split("\n")
   spec.require_paths = ["lib"]
