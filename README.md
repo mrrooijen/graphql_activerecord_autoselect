@@ -28,7 +28,7 @@ gem "graphql_activerecord_autoselect", "~> 1"
 
 ### Example
 
-```rb
+```ruby
 class Types::Actor < Types::Base::Object
   using GraphQLActiveRecordAutoSelect
 
@@ -67,13 +67,13 @@ query {
 
 It'll translate this:
 
-```rb
+```ruby
 object.organizations.autoselect(lookahead)
 ```
 
 Into this:
 
-```rb
+```ruby
 object.organizations.select(:id, :actor_id, :name, :time_zone)
 ```
 
@@ -88,7 +88,7 @@ The following fields are always selected:
 
 The example above builds a select on a has many relation, but the same works for belongs to.
 
-```rb
+```ruby
 class Types::Organization < Types::Base::Object
   using GraphQLActiveRecordAutoSelect
 
@@ -114,13 +114,13 @@ query {
 
 It'll translate this:
 
-```rb
+```ruby
 Actor.autoselect(lookahead).find(object.actor_id)
 ```
 
 Into this:
 
-```rb
+```ruby
 Actor.select(:id, :email).find(object.actor_id)
 ```
 
@@ -129,7 +129,7 @@ Actor.select(:id, :email).find(object.actor_id)
 
 You might have fields or methods that depend on the presence of one or more fields. You can specify dependents to ensure that the requested field or method will be able to successfully compute:
 
-```rb
+```ruby
 class Actor < ActiveRecord::Base
   def secret
     decrypt(secret_digest)
@@ -196,13 +196,13 @@ query {
 
 It'll translates this:
 
-```rb
+```ruby
 Actor.autoselect(lookahead, Actor.dependents).find(object.actor_id)
 ```
 
 Into this:
 
-```rb
+```ruby
 Actor.select(:id, :email, :first_name, :last_name, :secret_digest).find(object.actor_id)
 ```
 
