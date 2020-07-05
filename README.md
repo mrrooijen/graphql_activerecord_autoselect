@@ -50,7 +50,7 @@ end
 
 In this example an actor has many organizations. We allow the client to query all of the actor's organizations, or a specific one by id. We acquire the lookahead functionality provided by GraphQL Ruby and pass it to `autoselect`.
 
-The `autoselect` method is made available to all instances of ActiveRecord::Base and ActiveRecord::Relations in classes where the GraphQLActiveRecordAutoSelect refinement is used (`using GraphQLActiveRecordAutoSelect`).
+The `autoselect` method is made available to ActiveRecord::Base at the class level, as well as to all instances of ActiveRecord::Relations, in classes where the GraphQLActiveRecordAutoSelect refinement is used (`using GraphQLActiveRecordAutoSelect`).
 
 If you submit the following query to the server:
 
