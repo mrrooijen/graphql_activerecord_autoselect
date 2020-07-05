@@ -20,7 +20,7 @@ module TestHelpers
   end
 end
 
-class CreateAModel < ActiveRecord::Migration[6.0]
+class CreateAModel < ActiveRecord::Migration[5.0]
   def change
     create_table :a_models do |t|
       t.string :first_name
@@ -29,7 +29,7 @@ class CreateAModel < ActiveRecord::Migration[6.0]
   end
 end
 
-class CreateBModel < ActiveRecord::Migration[6.0]
+class CreateBModel < ActiveRecord::Migration[5.0]
   def change
     create_table :b_models do |t|
       t.string :first_name
@@ -41,7 +41,7 @@ class CreateBModel < ActiveRecord::Migration[6.0]
   end
 end
 
-class CreateCModel < ActiveRecord::Migration[6.0]
+class CreateCModel < ActiveRecord::Migration[5.0]
   def change
     create_table :c_models do |t|
       t.string :first_name
@@ -49,7 +49,7 @@ class CreateCModel < ActiveRecord::Migration[6.0]
   end
 end
 
-class CreateDModel < ActiveRecord::Migration[6.0]
+class CreateDModel < ActiveRecord::Migration[5.0]
   def change
     create_table :d_models do |t|
       t.string :first_name

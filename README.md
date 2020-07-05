@@ -13,7 +13,7 @@ The documentation can be found on [RubyDoc].
 ### Compatibility
 
 - Ruby 2.5+
-- ActiveRecord 6.0+
+- ActiveRecord 5.0+
 - GraphQL (Ruby) 1.9+
 
 

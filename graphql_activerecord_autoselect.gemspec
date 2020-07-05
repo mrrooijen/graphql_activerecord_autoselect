@@ -19,11 +19,10 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.required_ruby_version = Gem::Requirement.new(">= 2.5.0")
-  spec.add_runtime_dependency "activerecord", ">= 6.0.0", "< 7.0.0"
+  spec.add_runtime_dependency "activerecord", ">= 5.0.0", "< 7.0.0"
   spec.add_runtime_dependency "graphql", ">= 1.9.0", "< 2.0.0"
   spec.add_development_dependency "rake", "12.3.3"
   spec.add_development_dependency "yard", "0.9.25"
   spec.add_development_dependency "minitest", "5.14.1"
   spec.add_development_dependency "simplecov", "0.18.5"
-  spec.add_development_dependency "sqlite3", "1.4.2"
 end

@@ -12,6 +12,9 @@ jobs:
           - 2.5
           - 2.6
           - 2.7
+        gemfile:
+          - gemfiles/Gemfile.activerecord-5
+          - Gemfile
     steps:
       - uses: actions/checkout@v2
       - name: Use Ruby ${{ matrix.ruby }}
@@ -26,3 +29,5 @@ jobs:
           gem install bundler
           bundle install --jobs 4 --retry 3
           bundle exec rake
+        env:
+          BUNDLE_GEMFILE: ${{ matrix.gemfile }}

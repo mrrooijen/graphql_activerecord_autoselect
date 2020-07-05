@@ -4,6 +4,7 @@
 /.yardoc
 /.gitignore
 /_yardoc/
+/gemfiles/*.lock
 /coverage/
 /doc/
 /Gemfile.lock
