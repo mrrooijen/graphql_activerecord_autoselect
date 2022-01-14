@@ -18,11 +18,11 @@ Gem::Specification.new do |spec|
   spec.files         = `git ls-files -- lib README.md CHANGELOG.md LICENSE.txt`.split("\n")
   spec.require_paths = ["lib"]
 
-  spec.required_ruby_version = Gem::Requirement.new(">= 2.5.0")
-  spec.add_runtime_dependency "activerecord", ">= 5.0.0", "< 7.0.0"
+  spec.required_ruby_version = Gem::Requirement.new(">= 2.7.0")
+  spec.add_runtime_dependency "activerecord", ">= 6.0.0", "< 8.0.0"
   spec.add_runtime_dependency "graphql", ">= 1.9.0", "< 2.0.0"
-  spec.add_development_dependency "rake", "12.3.3"
-  spec.add_development_dependency "yard", "0.9.25"
-  spec.add_development_dependency "minitest", "5.14.1"
-  spec.add_development_dependency "simplecov", "0.18.5"
+  spec.add_development_dependency "rake", "13.0.6"
+  spec.add_development_dependency "yard", "0.9.27"
+  spec.add_development_dependency "minitest", "5.15.0"
+  spec.add_development_dependency "simplecov", "0.21.2"
 end

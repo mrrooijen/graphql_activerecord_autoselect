@@ -12,8 +12,8 @@ The documentation can be found on [RubyDoc].
 
 ### Compatibility
 
-- Ruby 2.5+
-- ActiveRecord 5.0+
+- Ruby 2.7+
+- ActiveRecord 6.0+
 - GraphQL (Ruby) 1.9+
 
 
@@ -22,7 +22,7 @@ The documentation can be found on [RubyDoc].
 Add the gem to your Gemfile and run `bundle`.
 
 ```ruby
-gem "graphql_activerecord_autoselect", "~> 1"
+gem "graphql_activerecord_autoselect", "~> 2"
 ```
 
 
