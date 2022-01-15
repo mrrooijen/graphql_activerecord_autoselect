@@ -10,9 +10,9 @@ module GraphQLActiveRecordAutoSelect
     def autoselect(lookahead, dependents = {})
       select(
         GraphQLActiveRecordAutoSelect.call(
-          :model      => self,
-          :lookahead  => lookahead,
-          :dependents => dependents,
+          model: self,
+          lookahead: lookahead,
+          dependents: dependents
         )
       )
     end
@@ -22,9 +22,9 @@ module GraphQLActiveRecordAutoSelect
     def autoselect(lookahead, dependents = {})
       select(
         GraphQLActiveRecordAutoSelect.call(
-          :model      => model,
-          :lookahead  => lookahead,
-          :dependents => dependents
+          model: model,
+          lookahead: lookahead,
+          dependents: dependents
         )
       )
     end
@@ -32,10 +32,10 @@ module GraphQLActiveRecordAutoSelect
 
   def call(model:, lookahead:, dependents:)
     primary_key = model.primary_key
-    columns     = model.column_names
-    fields      = get_fields(lookahead)
+    columns = model.column_names
+    fields = get_fields(lookahead)
 
-    Array.new.tap do |selection|
+    [].tap do |selection|
       selection.concat filter_by_columns(fields, columns)
       selection.concat include_identifier_columns(primary_key, columns)
       selection.concat include_dependents(fields, dependents)

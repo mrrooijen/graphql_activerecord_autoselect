@@ -11,7 +11,7 @@ require "graphql_activerecord_autoselect"
 module TestHelpers
   module ClassMethods
     def test(name, &block)
-      definition = "test_" + name.downcase.gsub(" ", "_")
+      definition = "test_" + name.downcase.tr(" ", "_")
 
       define_method(definition) do
         instance_eval(block)
@@ -60,8 +60,8 @@ class CreateDModel < ActiveRecord::Migration[5.0]
 end
 
 ActiveRecord::Base.establish_connection(
-  :adapter  => "sqlite3",
-  :database => ":memory:",
+  adapter: "sqlite3",
+  database: ":memory:"
 )
 
 CreateAModel.migrate(:up)

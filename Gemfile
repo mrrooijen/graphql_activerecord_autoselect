@@ -4,3 +4,4 @@ gemspec
 
 gem "activerecord", "~> 7"
 gem "sqlite3", "~> 1.4"
+gem "standardrb"

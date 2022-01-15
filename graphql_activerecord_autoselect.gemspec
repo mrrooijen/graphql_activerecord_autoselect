@@ -1,21 +1,21 @@
 require_relative "lib/graphql_activerecord_autoselect/version"
 
 Gem::Specification.new do |spec|
-  spec.name     = "graphql_activerecord_autoselect"
-  spec.version  = GraphQLActiveRecordAutoSelect::VERSION
-  spec.authors  = ["Michael van Rooijen"]
-  spec.email    = ["michael@vanrooijen.io"]
-  spec.summary  = "Automatic ActiveRecord column selection for GraphQL (Ruby) fields."
+  spec.name = "graphql_activerecord_autoselect"
+  spec.version = GraphQLActiveRecordAutoSelect::VERSION
+  spec.authors = ["Michael van Rooijen"]
+  spec.email = ["michael@vanrooijen.io"]
+  spec.summary = "Automatic ActiveRecord column selection for GraphQL (Ruby) fields."
   spec.homepage = "https://github.com/mrrooijen/" + spec.name
-  spec.license  = "MIT"
+  spec.license = "MIT"
 
-  spec.metadata["homepage_uri"]      = spec.homepage
-  spec.metadata["source_code_uri"]   = spec.homepage
-  spec.metadata["changelog_uri"]     = spec.homepage + "/blob/master/CHANGELOG.md"
-  spec.metadata["bug_tracker_uri"]   = spec.homepage + "/issues"
+  spec.metadata["homepage_uri"] = spec.homepage
+  spec.metadata["source_code_uri"] = spec.homepage
+  spec.metadata["changelog_uri"] = spec.homepage + "/blob/master/CHANGELOG.md"
+  spec.metadata["bug_tracker_uri"] = spec.homepage + "/issues"
   spec.metadata["documentation_uri"] = "https://rubydoc.info/gems/#{spec.name}/#{spec.version}"
 
-  spec.files         = `git ls-files -- lib README.md CHANGELOG.md LICENSE.txt`.split("\n")
+  spec.files = `git ls-files -- lib README.md CHANGELOG.md LICENSE.txt`.split("\n")
   spec.require_paths = ["lib"]
 
   spec.required_ruby_version = Gem::Requirement.new(">= 2.7.0")
